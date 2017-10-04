@@ -1,0 +1,7 @@
+ng-app: indica que es una app AngularJS
+
+ng-init:
+Se usa para inicializar variables. Example: ng-init="Nombre='Guille'"
+Para llamar a la variable se usa {{Nombre}}
+
+Tambien se puede hacer {{2017-2009}} y muestra el resultado
