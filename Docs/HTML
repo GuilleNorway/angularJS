@@ -1,0 +1,13 @@
+-- Poner nombre del app (tambien en el controller)
+	<html ng-app="AlumnosApp">
+
+
+-- en el body poner los controllers
+<body ng-controller="AlumnosController">
+
+-- Cargar los scripts al final de la pagina dentro del body
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>	
+	<script src="controller.js"></script>
+
+	Cargar siempre el js de angular.min, ya sea url web o local.
+
