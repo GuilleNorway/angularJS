@@ -6,24 +6,45 @@
 	<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body ng-controller="AlumnosController">
+
 	<h1>Cuaderno Alumnos</h1>
+
+	<!-- {{alumnos|json}}<br />
+	{{formVisibility|json}} <br />  -->
+	
 	<div class="wrapper">
 		<div class="contact-item" ng-repeat="alumno in alumnos | orderBy:'nombre'">
-			<div class="nombre"> {{alumno.nombre}} - {{alumno.telefono}}</div>
-			<span class="curso">{{alumno.curso}}</span>
+			<div class="nombre"> 
+				{{alumno.nombre}} - {{alumno.telefono}}
+			</div>
+			<span class="curso">
+				{{alumno.curso}}
+			</span>
 		</div>
-	</div>
+	</div>	
+	
 	<br>
-	<center><button ng-click="ShowForm()" ng-hide="formVisibility">Añadir Contactos</button></center>
-	<div ng-show="formVisibility" class="wrapper">
+
+	<center>
+		<button ng-click="ShowForm()" ng-hide="formVisibility">
+			Añadir Contactos
+		</button>
+	</center>
+	
+	<div class="wrapper" ng-show="formVisibility" >		
 		<h2> Añadir un Contacto</h2>
+
 		Nombre: <input type="text" ng-model="nuevoAlumno.nombre"></input>
 		Telefono: <input type="text" ng-model="nuevoAlumno.telefono"></input>
 		Curso: <input type="text" ng-model="nuevoAlumno.curso"></input>
-		<button ng-click="Save()">Guardar</button>
+
+		<button ng-click="Save()">
+			Guardar
+		</button>
 	</div>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>	
 	<script src="controller.js"></script>
+
 </body>
 </html>

@@ -1,5 +1,8 @@
 var app = angular.module('AlumnosApp',[])
 	.controller('AlumnosController', function($scope){
+
+		$scope.formVisibility = false;
+		
 		$scope.alumnos = [
 			{
 				nombre: "Juan Blanco",
@@ -18,7 +21,7 @@ var app = angular.module('AlumnosApp',[])
 			}
 		];
 
-		$scope.Save=function() {
+		$scope.Save = function() {
 			$scope.alumnos.push(
 				{
 					nombre: $scope.nuevoAlumno.nombre,
@@ -27,12 +30,13 @@ var app = angular.module('AlumnosApp',[])
 				}
 
 			);
-			$scope.formVisibility=false;
+			$scope.formVisibility = false;
 			console.log($scope.formVisibility);
 		};
 
-		$scope.ShowForm=function(){
-			$scope.formVisibility=true;
+		$scope.ShowForm = function(){
+			$scope.formVisibility = true;
 			console.log($scope.formVisibility);
 		};
+
 });

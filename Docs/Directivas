@@ -9,6 +9,16 @@ Para llamar a la variable se usa {{Nombre}}
 Tambien se puede hacer {{2017-2009}} y muestra el resultado
 
 ng-repeat:
-Arma un loop, por ej. ng-repeat="alumno in alumnos"
+Arma un loop, por ej. ng-repeat="alumno in alumnos | orderBy:'nombre'"
 {{alumno.nombre}}
 {{alumno.apellido}}
+
+El orderBy permite ordenar.
+
+ng-click: al hacer click llama a la funcion definida
+<button ng-click="Save()">
+
+ng-model:
+Permite enlazar un textbox con una variable.
+
+ng-show / ng-hide: muestra u oculta algo.
